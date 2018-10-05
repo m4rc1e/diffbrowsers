@@ -45,7 +45,7 @@ class GFRegression:
                       [('fonts_before', open(f, 'rb')) for f in fonts_before]
         request = requests.post(url_upload, files=payload)
         request_json = json.loads(request.content)
-        self.uuid = request_json['uid']
+        self.uuid = request_json['uuid']
         logger.info("Fonts have been uploaded, uuid: %s" % self.uuid)
 
     def url(self, view, font_type, pt=None):

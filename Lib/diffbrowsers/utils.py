@@ -33,7 +33,7 @@ def load_browserstack_credentials():
 def input_browserstack_credentials(config_filepath):
     """User needs to input their Browserstack username and access key."""
     placeholder = '[Credentials]\nusername = {}\naccess_key = {}\n'
-    print 'No BrowserStack credentials found. Input your details:'
+    print('No BrowserStack credentials found. Input your details:')
     username = raw_input('Browserstack username: ')
     acc_key = raw_input('Browserstack Access Key: ')
 
@@ -42,7 +42,7 @@ def input_browserstack_credentials(config_filepath):
 
     with open(config_filepath, 'w') as config:
         config.write(placeholder.format(username, acc_key))
-        print 'Config file written to {}'.format(config_filepath)
+        print('Config file written to {}'.format(config_filepath))
         return username, acc_key
 
 
